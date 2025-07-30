@@ -1,0 +1,11 @@
+services:
+  # See https://playwright.dev/docs/docker#recommended-docker-configuration
+  app:
+    # Using --init Docker flag is recommended to avoid special treatment for processes with PID=1. This is a common reason for zombie processes.
+    init: true
+    # Using --ipc=host is recommended when using Chromium. Without it, Chromium can run out of memory and crash. Learn more about this option in Docker docs.
+    ipc: host
+    build:
+      context: .
+    environment:
+      - NPM_CONFIG_UPDATE_NOTIFIER=false

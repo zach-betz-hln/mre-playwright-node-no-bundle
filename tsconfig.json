@@ -1,0 +1,10 @@
+{
+  // See https://www.npmjs.com/package/@tsconfig/node22
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    // DOM needed to avoid `page.evaluate` TS errors
+    "lib": ["DOM"]
+  }
+}
